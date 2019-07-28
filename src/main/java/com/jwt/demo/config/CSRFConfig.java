@@ -15,7 +15,7 @@ public class CSRFConfig {
 
     @Bean
     @ConditionalOnMissingBean
-    public CsrfTokenRepository jwtCsrfTokenRepository() {
+     public CsrfTokenRepository jwtCsrfTokenRepository() {
         return new JWTCsrfTokenRepository(secretService.getHS256SecretBytes());
     }
 }
